@@ -1,0 +1,12 @@
+.App {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  .button{
+    background: seagreen !important;
+    color: white !important;
+  }
+  .MuiAppBar-colorPrimary{
+    background-color: white !important;
+    color: rgb(19, 2, 2) !important;
+  }
