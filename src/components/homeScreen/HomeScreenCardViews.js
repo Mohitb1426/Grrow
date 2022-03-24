@@ -1,9 +1,9 @@
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import { Button } from '@mui/material';
-import '../../styles.css';
-import React from 'react';
-import { strings } from '../../globalization/String';
+import Grid from "@mui/material/Grid";
+import Box from "@mui/material/Box";
+import { Button } from "@mui/material";
+import "../../styles.css";
+import React from "react";
+import { strings } from "../../globalization/String";
 
 const HomeScreenCardViews = () => {
     function FormRow() {
@@ -13,17 +13,17 @@ const HomeScreenCardViews = () => {
                     <Box
                         sx={{
                             boxShadow: 3,
-                            width: '8rem',
-                            height: '5rem',
-                            bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
+                            width: "8rem",
+                            height: "5rem",
+                            bgcolor: (theme) => (theme.palette.mode === "dark" ? "#101010" : "#fff"),
                             color: (theme) =>
-                                theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
+                                theme.palette.mode === "dark" ? "grey.300" : "grey.800",
                             p: 1,
                             m: 1,
                             borderRadius: 2,
-                            textAlign: 'center',
-                            fontSize: '0.875rem',
-                            fontWeight: '700',
+                            textAlign: "center",
+                            fontSize: "0.875rem",
+                            fontWeight: "700",
                         }}
                     >
                         Mutual Funds
@@ -33,10 +33,9 @@ const HomeScreenCardViews = () => {
                     <Box
                         sx={{
                             boxShadow: 3,
-                            width: '8rem',
-                            height: '5rem',
-                            bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
-                            color: (theme) =>
+                            width: "8rem",
+                            height: "5rem",
+                            bgcolor: (theme) => (theme.palette.mode === "dark" ? "#101010" : "#fff"),color: (theme) =>
                                 theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
                             p: 1,
                             m: 1,

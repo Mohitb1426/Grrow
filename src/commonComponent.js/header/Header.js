@@ -4,22 +4,12 @@ import Toolbar from "@material-ui/core/Toolbar";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
 import React from "react";
-import '../../styles.css';
+import "../../styles.css";
 import { Avatar, Button } from "@material-ui/core";
-import GrrowLogo from '../../assets/images/grrow_logo.svg';
+import GrrowLogo from "../../assets/images/grrow_logo.svg";
 const useStyles = makeStyles((theme) => ({
-    grow: {
-        flexGrow: 1
-    },
-    menuButton: {
-        marginRight: theme.spacing(2)
-    },
-    title: {
-        display: "none",
-        [theme.breakpoints.up("sm")]: {
-            display: "block"
-        }
-    },
+    grow: { flexGrow: 1 }, menuButton: { marginRight: theme.spacing(2) },
+    title: { display: "none", [theme.breakpoints.up("sm")]: { display: "block" } },
     search: {
         position: "relative",
         borderRadius: theme.shape.borderRadius,
