@@ -4,9 +4,10 @@ import Toolbar from "@material-ui/core/Toolbar";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
 import React from "react";
-import "../../styles.css";
+import "../../css/styles.css";
 import { Avatar, Button } from "@material-ui/core";
 import GrrowLogo from "../../assets/images/grrow_logo.svg";
+import { strings } from "../../globalization/String";
 const useStyles = makeStyles((theme) => ({
     grow: { flexGrow: 1 }, 
     menuButton: { marginRight: theme.spacing(2) },
@@ -86,7 +87,7 @@ export default function Header() {
                             />
                         </div>
                         <div className={classes.grow} />
-                        <Button className="button" variant="outlined">Login/Register</Button>
+                        <Button className="button" variant="outlined">{strings.LoginRegister}</Button>
                     </Toolbar>
                 </AppBar>
             </div>

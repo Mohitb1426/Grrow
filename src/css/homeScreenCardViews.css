@@ -1,0 +1,30 @@
+.homeScreenCardViews-span {
+    float: left;
+    margin-left: 40px;
+}
+
+.homeScreenCardViews-span-second {
+    float: left;
+    margin-left: 40px;
+}
+
+.homeScreenCardViews-button {
+    background: seagreen !important;
+    color: white !important;
+    float: left !important;
+}
+
+.homeScreenCardViews-invest {
+    margin-top: 80px !important;
+}
+
+.suffle-text {
+    color: purple;
+    margin-left: 10px !important;
+}
+
+.homeScreenCardViews-avatar {
+    margin-top: 50px !important;
+    float: left;
+    margin-left: 5px;
+}
