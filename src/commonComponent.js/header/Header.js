@@ -87,6 +87,8 @@ export default function Header() {
                         </div>
                         <div className={classes.grow} />
                         <Button className="button" variant="outlined">Login/Register</Button>
+                    
+                    
                     </Toolbar>
                 </AppBar>
             </div>
