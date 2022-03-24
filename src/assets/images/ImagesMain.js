@@ -1,0 +1,1 @@
+export const  GrrowLogo = require('./grrow_logo.svg')
