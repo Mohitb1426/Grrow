@@ -8,7 +8,8 @@ import "../../styles.css";
 import { Avatar, Button } from "@material-ui/core";
 import GrrowLogo from "../../assets/images/grrow_logo.svg";
 const useStyles = makeStyles((theme) => ({
-    grow: { flexGrow: 1 }, menuButton: { marginRight: theme.spacing(2) },
+    grow: { flexGrow: 1 }, 
+    menuButton: { marginRight: theme.spacing(2) },
     title: { display: "none", [theme.breakpoints.up("sm")]: { display: "block" } },
     search: {
         position: "relative",
