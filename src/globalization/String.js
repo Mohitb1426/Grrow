@@ -1,3 +1,3 @@
 export const strings = {
-    FDInvest: 'Invest in FDs'
+    FDInvest : "Invest in FDs"
 }
