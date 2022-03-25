@@ -1,105 +1,183 @@
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { Button } from "@mui/material";
-import "../../styles.css";
-import React from "react";
+import "../../css/styles.css";
+import React, { useEffect, useState } from "react";
 import { strings } from "../../globalization/String";
+import "../../css/homeScreenCardViews.css";
+import MutualFunds from "../../assets/images/mfHome.af668dea.svg";
+import StocksImage from "../../assets/images/stockHome.af2af225.svg";
+import FuturesOptionsImage from "../../assets/images/optionHome.5e98a896.svg";
+import USStocksImage from "../../assets/images/stockHome.af2af225.svg";
+import IPOImage from "../../assets/images/ipoHome.b071ba94.svg";
+import FixedDepositsImage from "../../assets/images/fdHome.ba2c5441.svg";
+import { Avatar } from "@material-ui/core";
 
+const divStyle = {
+    display: 'flex',
+    alignItems: 'center'
+};
+const textArray = ['Mutual Funds', 'Stocks', 'Futures & Options', 'US Stocks', 'IPO', 'Fixed Deposits'];
 const HomeScreenCardViews = () => {
-    function FormRow() {
-        return (
-            <React.Fragment>
-                <Grid item xs={4}>
-                    <Box
-                        sx={{
-                            boxShadow: 3,
-                            width: "8rem",
-                            height: "5rem",
-                            bgcolor: (theme) => (theme.palette.mode === "dark" ? "#101010" : "#fff"),
-                            color: (theme) =>
-                                theme.palette.mode === "dark" ? "grey.300" : "grey.800",
-                            p: 1,
-                            m: 1,
-                            borderRadius: 2,
-                            textAlign: "center",
-                            fontSize: "0.875rem",
-                            fontWeight: "700",
-                        }}
-                    >
-                        Mutual Funds
-                    </Box>
-                </Grid>
-                <Grid item xs={4}>
-                    <Box
-                        sx={{
-                            boxShadow: 3,
-                            width: "8rem",
-                            height: "5rem",
-                            bgcolor: (theme) => (theme.palette.mode === "dark" ? "#101010" : "#fff"),color: (theme) =>
-                                theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
-                            p: 1,
-                            m: 1,
-                            borderRadius: 2,
-                            textAlign: 'center',
-                            fontSize: '0.875rem',
-                            fontWeight: '700',
-                        }}
-                    >
-                        Mutual Funds
-                    </Box>
-                </Grid>
-            </React.Fragment>
-        );
-    }
+    const [seconds, setSeconds] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setSeconds(seconds => seconds + 1);
+        }, 2000);
+        return () => clearInterval(interval);
+    }, []);
+
+    let textThatChanges = textArray[seconds % textArray.length];
     return (
         <div className='cardView-center'>
             <Grid container columns={16}>
-                <Grid item xs={10}>
-                    <span>{strings.FDInvest}</span><br></br>
-                    <span>Trusted by Millions of Indians. Start investing Today</span><br></br>
-                    <Button className="button" variant="outlined">Get Started</Button>
+                <Grid className="homeScreenCardViews-invest" item xs={10}>
+                    <div className="homeScreenCardViews-span">
+                        <div style={divStyle}>
+                            <h1 >{strings.FDInvest} </h1>
+                            <h1 className="suffle-text">{textThatChanges}</h1>
+                        </div>
+
+                        <h3 >{strings.FDInvestDescription}</h3>
+                        <Button className="homeScreenCardViews-button" variant="outlined">{strings.GetStarted}</Button>
+                    </div>
                 </Grid>
                 <Grid item xs={6}>
-                    <Grid item xs={4}>
-                        <Box
-                            sx={{
-                                boxShadow: 3,
-                                width: '8rem',
-                                height: '5rem',
-                                bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
-                                color: (theme) =>
-                                    theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
-                                p: 1,
-                                m: 1,
-                                borderRadius: 2,
-                                textAlign: 'center',
-                                fontSize: '0.875rem',
-                                fontWeight: '700',
-                            }}
-                        >
-                            Mutual Funds
-                        </Box>
-                    </Grid>
-                    <FormRow />
-                    <Grid item xs={4}>
-                        <Box
-                            sx={{
-                                boxShadow: 3,
-                                width: '8rem',
-                                height: '5rem',
-                                bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
-                                color: (theme) =>
-                                    theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
-                                p: 1,
-                                m: 1,
-                                borderRadius: 2,
-                                textAlign: 'center',
-                                fontSize: '0.875rem',
-                                fontWeight: '700',
-                            }}
-                        >
-                            Mutual Funds
-                        </Box>
+                    <Grid alignItems="flex-start" container spacing={1}>
+                        <Grid container direction="column" item xs={6} spacing={1}>
+                            <Grid item xs={12} >
+                                <Box
+                                    sx={{
+                                        boxShadow: 3,
+                                        width: '10rem',
+                                        height: '8rem',
+                                        bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
+                                        color: (theme) =>
+                                            theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
+                                        p: 1,
+                                        m: 1,
+                                        borderRadius: 2,
+                                        textAlign: 'center',
+                                        fontSize: '0.875rem',
+                                        fontWeight: '700',
+                                    }}
+                                ><Avatar alt="Remy Sharp" src={MutualFunds} />
+                                    <h3 className="homeScreenCardViews-avatar">{strings.MutualFunds}</h3>
+                                </Box>
+                            </Grid>
+                        </Grid>
+                        <Grid container direction="column" item xs={6} spacing={1}>
+                            <Grid item xs={12} >
+                                <Box
+                                    sx={{
+                                        boxShadow: 3,
+                                        width: '10rem',
+                                        height: '8rem',
+                                        bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
+                                        color: (theme) =>
+                                            theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
+                                        p: 1,
+                                        m: 1,
+                                        borderRadius: 2,
+                                        textAlign: 'center',
+                                        fontSize: '0.875rem',
+                                        fontWeight: '700',
+                                    }}
+                                ><Avatar alt="Remy Sharp" src={StocksImage} />
+                                    <h3 className="homeScreenCardViews-avatar">{strings.Stocks}</h3>
+                                </Box>
+                            </Grid>
+                        </Grid>
+                        <Grid container direction="column" item xs={6} spacing={1}>
+                            <Grid item xs={12} >
+                                <Box
+                                    sx={{
+                                        boxShadow: 3,
+                                        width: '10rem',
+                                        height: '8rem',
+                                        bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
+                                        color: (theme) =>
+                                            theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
+                                        p: 1,
+                                        m: 1,
+                                        borderRadius: 2,
+                                        textAlign: 'center',
+                                        fontSize: '0.875rem',
+                                        fontWeight: '700',
+                                    }}
+                                ><Avatar alt="Remy Sharp" src={FuturesOptionsImage} />
+                                    <h3 className="homeScreenCardViews-avatar">{strings.FuturesOptions}</h3>
+                                </Box>
+                            </Grid>
+                        </Grid>
+                        <Grid container direction="column" item xs={6} spacing={1}>
+                            <Grid item xs={12} >
+                                <Box
+                                    sx={{
+                                        boxShadow: 3,
+                                        width: '10rem',
+                                        height: '8rem',
+                                        bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
+                                        color: (theme) =>
+                                            theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
+                                        p: 1,
+                                        m: 1,
+                                        borderRadius: 2,
+                                        textAlign: 'center',
+                                        fontSize: '0.875rem',
+                                        fontWeight: '700',
+                                    }}
+                                ><Avatar alt="Remy Sharp" src={USStocksImage} />
+                                    <h3 className="homeScreenCardViews-avatar">{strings.USStocks}</h3>
+                                </Box>
+                            </Grid>
+                        </Grid>
+                        <Grid container direction="column" item xs={6} spacing={1}>
+                            <Grid item xs={12} >
+                                <Box
+                                    sx={{
+                                        boxShadow: 3,
+                                        width: '10rem',
+                                        height: '8rem',
+                                        bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
+                                        color: (theme) =>
+                                            theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
+                                        p: 1,
+                                        m: 1,
+                                        borderRadius: 2,
+                                        textAlign: 'center',
+                                        fontSize: '0.875rem',
+                                        fontWeight: '700',
+                                    }}
+                                ><Avatar alt="Remy Sharp" src={IPOImage} />
+                                    <h3 className="homeScreenCardViews-avatar">{strings.IPO}</h3>
+                                </Box>
+                            </Grid>
+                        </Grid>
+                        <Grid container direction="column" item xs={6} spacing={1}>
+                            <Grid item xs={12} >
+                                <Box
+                                    sx={{
+                                        boxShadow: 3,
+                                        width: '10rem',
+                                        height: '8rem',
+                                        bgcolor: (theme) => (theme.palette.mode === 'dark' ? '#101010' : '#fff'),
+                                        color: (theme) =>
+                                            theme.palette.mode === 'dark' ? 'grey.300' : 'grey.800',
+                                        p: 1,
+                                        m: 1,
+                                        borderRadius: 2,
+                                        textAlign: 'center',
+                                        fontSize: '0.875rem',
+                                        fontWeight: '700',
+                                        alignItems: 'start'
+                                    }}
+                                ><Avatar alt="Remy Sharp" src={FixedDepositsImage} />
+                                    <h3 className="homeScreenCardViews-avatar">{strings.FixedDeposits}</h3>
+                                </Box>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>
