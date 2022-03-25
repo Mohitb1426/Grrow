@@ -17,22 +17,29 @@ function LoginForm() {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <form className='loginform'>
+
+      <div className='parent'>
+        <form className='child loginform'   >
 
         <h1 className='continueWithGoogle'>Welcome to Groww</h1>
-
+        <div>
         <Button variant="outlined"  startIcon={<GoogleIcon/>} className='googlebutton'>Continue with Google</Button>
-
-        
-
-        
+        </div>
+        <div>
         <TextField id="standard-basic" label="Your Email Address" variant="standard" />
-      
+        </div>
 
-         
-          <Button>Continue</Button>
+         <div>
+          <Button className='absolutecenter' style={{padding:"25px 25px"}}>Continue</Button>
+          </div>
+          <div>
           <p>By proceeding ,I agree to <span>T&C</span>and <span>Privacy Policy</span></p>
+          </div>
         </form>
+        <div className='child' > 
+        <p>hello</p>
+        </div>
+        </div>
       </Modal>
       </React.Fragment>
     );
