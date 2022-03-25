@@ -4,6 +4,7 @@ const KeepLearnKeepGrow = () => {
     return (
         <div className="keepLearning-keepGrowing-div">
             <h1>Keep learning. Keep growing</h1>
+            <h1>Keep learning. Keep growing</h1>
         </div>
     );
 }
