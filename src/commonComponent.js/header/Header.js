@@ -11,6 +11,11 @@ import {useStyles} from "./HeaderStyle";
 
 export default function Header() {
     const classes = useStyles();
+    const sentryCheck = () => {
+        // eslint-disable-next-line no-debugger
+        debugger;
+        throw new Error("Sentry Error Check!");
+    }
     return (
         <div className="App">
             <div className={classes.grow}>
@@ -34,7 +39,7 @@ export default function Header() {
                             />
                         </div>
                         <div className={classes.grow} />
-                        <Button className="button" variant="outlined">{strings.LoginRegister}</Button>
+                        <Button className="button" variant="outlined" onClick={sentryCheck}>{strings.LoginRegister}</Button>
                     </Toolbar>
                 </AppBar>
             </div>
