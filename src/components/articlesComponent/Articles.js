@@ -1,16 +1,17 @@
 import React from "react";
-import './keepLearningKeepGrowing.css';
+import './articles.css';
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import BlogOne from "../../assets/images/blog1.webp";
-import BlogTwo from "../../assets/images/blog2.webp";
-import BlogThree from "../../assets/images/blog3.webp";
+import BlogOne from "../../assets/images/articlesImages/blog1.webp";
+import BlogTwo from "../../assets/images/articlesImages/blog2.webp";
+import BlogThree from "../../assets/images/articlesImages/blog3.webp";
+import { strings } from "../../globalization/String";
 
-const KeepLearnKeepGrow = () => {
+const ArticlesComponent = () => {
     return (
         <div >
             <div className="keepLearning-keepGrowing-div">
-                <h1>Keep learning. Keep growing</h1></div>
+                <h1>{strings.KeepLearningKeepGrowing}</h1></div>
             <div className="keeplearn-grid">
                 <Grid alignItems="flex-start" container spacing={1}>
                     <Grid container direction="column" item xs={4} spacing={1}>
@@ -33,7 +34,7 @@ const KeepLearnKeepGrow = () => {
                                 src={BlogOne}
                             />
                         </Grid>
-                        <h3 style={{"width":"15em", "marginLeft":"4em"}} className="grid-text">How to Select/Pick Stocks for Intraday</h3>
+                        <h3 style={{ "width": "15em", "marginLeft": "4em" }} className="grid-text">{strings.SelectStocks}</h3>
                     </Grid>
                     <Grid container direction="column" item xs={4} spacing={1}>
                         <Grid item xs={12} >
@@ -55,7 +56,7 @@ const KeepLearnKeepGrow = () => {
                                 src={BlogTwo}
                             />
                         </Grid>
-                        <h3 style={{"width":"15em", "marginLeft":"4em"}} className="grid-text">Beginners Guide to Mutual Funds</h3>
+                        <h3 style={{ "width": "15em", "marginLeft": "4em" }} className="grid-text">{strings.GuideMutualFunds}</h3>
                     </Grid>
                     <Grid container direction="column" item xs={4} spacing={1}>
                         <Grid item xs={12} >
@@ -77,11 +78,11 @@ const KeepLearnKeepGrow = () => {
                                 src={BlogThree}
                             />
                         </Grid>
-                        <h3 style={{"width":"15em", "marginLeft":"4em"}} className="grid-text">How to Diversify in the Time of Market Volatility</h3>
+                        <h3 style={{ "width": "15em", "marginLeft": "4em" }} className="grid-text">{strings.DiversifyVolatility}</h3>
                     </Grid>
                 </Grid>
             </div>
         </div>
     );
 }
-export default KeepLearnKeepGrow;
+export default ArticlesComponent;
