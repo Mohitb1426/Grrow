@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import InvestorImage from "../../assets/images/investorsImages/roopaImg.5575c84f.jpg";
 import { strings } from "../../globalization/String";
 import { Avatar } from "@material-ui/core";
+import { Rating } from "@mui/material";
 
 const divStyle = {
     display: 'flex',
@@ -38,21 +39,24 @@ const Investors = () => {
                                 }}
                                 alt="The house from the offer."
                             >
-                                <div className="investor-avatar"><Avatar alt="Remy Sharp" src={InvestorImage} /></div>
+                                <div className="investor-avatar">
+                                    <div style={divStyle}>
+                                        <Avatar className="investor-avatar-img" alt="Remy Sharp" src={InvestorImage} />
+                                        <Rating value={4} className="investor-rating" name="simple-controlled" />
+                                    </div></div>
                                 <div>
-                                    <div>
-                                        <span className="investor-description-span" >{strings.InvestorDescription} </span>
+                                    <div className="investor-description-span">
+                                        <p>{strings.InvestorDescription} </p>
+                                        <p className="invertor-pragraph">{strings.InvestorName} </p>
+                                        <p className="invertor-pragraph-second">{strings.InvestorTitle} </p>
                                     </div>
-                                    <span className="investor-subDescription-span">{strings.InvestorName}</span>
-                                    <br/>
-                                    <span className="investor-subDescription-span">{strings.InvestorTitle}</span>
                                 </div>
                             </Box>
                         </Grid>
                     </Grid>
                     <Grid container direction="column" item xs={4} spacing={1}>
                         <Grid item xs={12} >
-                            <Box
+                           <Box
                                 sx={{
                                     boxShadow: 1,
                                     width: '21rem',
@@ -66,13 +70,25 @@ const Investors = () => {
                                     fontWeight: '700',
                                 }}
                                 alt="The house from the offer."
-                            ><div className="investor-avatar"><Avatar alt="Remy Sharp" src={InvestorImage} /></div>
+                            >
+                                <div className="investor-avatar">
+                                    <div style={divStyle}>
+                                        <Avatar className="investor-avatar-img" alt="Remy Sharp" src={InvestorImage} />
+                                        <Rating value={3} className="investor-rating" name="simple-controlled" />
+                                    </div></div>
+                                <div>
+                                    <div className="investor-description-span">
+                                        <p>{strings.InvestorDescription} </p>
+                                        <p className="invertor-pragraph">{strings.InvestorName} </p>
+                                        <p className="invertor-pragraph-second">{strings.InvestorTitle} </p>
+                                    </div>
+                                </div>
                             </Box>
                         </Grid>
                     </Grid>
                     <Grid container direction="column" item xs={4} spacing={1}>
                         <Grid item xs={12} >
-                            <Box
+                           <Box
                                 sx={{
                                     boxShadow: 1,
                                     width: '21rem',
@@ -86,7 +102,19 @@ const Investors = () => {
                                     fontWeight: '700',
                                 }}
                                 alt="The house from the offer."
-                            ><div className="investor-avatar"><Avatar alt="Remy Sharp" src={InvestorImage} /></div>
+                            >
+                                <div className="investor-avatar">
+                                    <div style={divStyle}>
+                                        <Avatar className="investor-avatar-img" alt="Remy Sharp" src={InvestorImage} />
+                                        <Rating value={5} className="investor-rating" name="simple-controlled" />
+                                    </div></div>
+                                <div>
+                                    <div className="investor-description-span">
+                                        <p>{strings.InvestorDescription} </p>
+                                        <p className="invertor-pragraph">{strings.InvestorName} </p>
+                                        <p className="invertor-pragraph-second">{strings.InvestorTitle} </p>
+                                    </div>
+                                </div>
                             </Box>
                         </Grid>
                     </Grid>

@@ -1,22 +1,11 @@
-import LoginScreens from "./Language/LoginScreens"
+import LoginScreens from "./Language/LanguageLoginScreens";
+import Articles from "./Language/LanguageArticles";
+import LanguageHomeScreen from "./Language/LanguageHomeScreen";
+import LanguageInvestors from "./Language/LanguageInvestors";
+
 export const strings = {
-    FDInvest: "Invest in",
-    FDInvestDescription: "Trusted by Millions of Indians. Start investing Today",
-    GetStarted: "Get Started",
+    ...Articles,
     ...LoginScreens,
-    MutualFunds: "Mutual Funds",
-    Stocks: "Stocks",
-    FuturesOptions: "Futures & Options",
-    USStocks: "US Stocks",
-    IPO:"IPO",
-    FixedDeposits:"Fixed Deposits",
-    KeepLearningKeepGrowing : "Keep learning. Keep growing",
-    SelectStocks :"How to Select/Pick Stocks for Intraday",
-    GuideMutualFunds :"Beginners Guide to Mutual Funds",
-    DiversifyVolatility:"How to Diversify in the Time of Market Volatility",
-    CreatingInvestors :"Creating proud investors.",
-    CreatingInvestorsDescription:"You can feel the pride of being a Groww investor in their words.",
-    InvestorDescription:"Groww.in was the platform where I first got onboard to MF and I would  have to say, even for a beginner like me it made things quite easier to explore and invest.",
-    InvestorName :" Ankit Puri",
-    InvestorTitle :" Product Specialist, Google",
+    ...LanguageHomeScreen,
+    ...LanguageInvestors
 }
