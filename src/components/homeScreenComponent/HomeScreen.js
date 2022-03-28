@@ -1,16 +1,16 @@
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { Button } from "@mui/material";
-import "../../css/styles.css";
+import "../../styles.css";
 import React, { useEffect, useState } from "react";
 import { strings } from "../../globalization/String";
-import "../../css/homeScreenCardViews.css";
-import MutualFunds from "../../assets/images/mfHome.af668dea.svg";
-import StocksImage from "../../assets/images/stockHome.af2af225.svg";
-import FuturesOptionsImage from "../../assets/images/optionHome.5e98a896.svg";
-import USStocksImage from "../../assets/images/stockHome.af2af225.svg";
-import IPOImage from "../../assets/images/ipoHome.b071ba94.svg";
-import FixedDepositsImage from "../../assets/images/fdHome.ba2c5441.svg";
+import "./homeScreen.css";
+import MutualFunds from "../../assets/images/homeScreenImages/mfHome.af668dea.svg";
+import StocksImage from "../../assets/images/homeScreenImages/stockHome.af2af225.svg";
+import FuturesOptionsImage from "../../assets/images/homeScreenImages/optionHome.5e98a896.svg";
+import USStocksImage from "../../assets/images/homeScreenImages/stockHome.af2af225.svg";
+import IPOImage from "../../assets/images/homeScreenImages/ipoHome.b071ba94.svg";
+import FixedDepositsImage from "../../assets/images/homeScreenImages/fdHome.ba2c5441.svg";
 import { Avatar } from "@material-ui/core";
 
 const divStyle = {
@@ -18,7 +18,7 @@ const divStyle = {
     alignItems: 'center'
 };
 const textArray = ['Mutual Funds', 'Stocks', 'Futures & Options', 'US Stocks', 'IPO', 'Fixed Deposits'];
-const HomeScreenCardViews = () => {
+const HomeScreen = () => {
     const [seconds, setSeconds] = useState(0);
 
     useEffect(() => {
@@ -184,4 +184,4 @@ const HomeScreenCardViews = () => {
         </div >
     );
 }
-export default HomeScreenCardViews;
+export default HomeScreen;

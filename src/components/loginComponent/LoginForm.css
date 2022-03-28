@@ -7,8 +7,6 @@
     padding: 10px;
 }
 
-
-
 .child {
     display: inline-block;
     border: 1px solid red;
@@ -45,16 +43,19 @@
     align-items: center;
     padding: 25px 25px;
 }
-.loginform-imagediv{
+
+.loginform-imagediv {
     background-color: #3DB87A !important;
     height: 100% !important;
 }
-.loginform-maingrid{
+
+.loginform-maingrid {
     /* margin-top: 10em !important ;
     margin-left: 5em !important;
     margin-right: 15em !important; */
 }
-.login-form-modal{
+
+.login-form-modal {
     margin-left: 8em !important;
     margin-right: 8em !important;
     margin-top: 10em !important;

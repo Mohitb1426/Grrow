@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "./commonComponent.js/header/Header";
-import HomeScreenCardViews from "./components/homeScreen/HomeScreenCardViews";
-import KeepLearnKeepGrow from "./components/keepLearnKeepGrow";
+import HomeScreenCardViews from "./components/homeScreenComponent/HomeScreen";
+import KeepLearnKeepGrow from "./components/articlesComponent/Articles";
+import Investor from "./components/investorsComponent/Investors";
 
 const Main = () => {
     return (
@@ -9,6 +10,7 @@ const Main = () => {
             <Header />
             <HomeScreenCardViews />
             <KeepLearnKeepGrow />
+            <Investor />
         </div>
     );
 }
