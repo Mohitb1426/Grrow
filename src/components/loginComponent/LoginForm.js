@@ -13,7 +13,6 @@ function LoginForm() {
   const onContinue = () => {
     const emailRegax =/\S+@\S+\.\S+/
     if(Email !=='' && Email.match(emailRegax)){
-     
      swal("Welcome");
     }
     else{
@@ -27,7 +26,6 @@ function LoginForm() {
         className="login-form-modal"
         hideBackdrop
         open={true}
-
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
