@@ -2,14 +2,19 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
-import React from "react";
+import React, { useState } from "react";
 import "../../styles.css";
 import { Avatar, Button } from "@material-ui/core";
 import GrrowLogo from "../../assets/images/headerImages/grrow_logo.svg";
 import { strings } from "../../globalization/String";
-import {useStyles} from "./HeaderStyle";
+import { useStyles } from "./HeaderStyle";
+import LoginForm from "../../components/loginComponent/LoginForm";
 
 export default function Header() {
+    const [modal, setModal] = useState(false)
+    const openModal = () => {
+        setModal(true);
+    }
     const classes = useStyles();
     return (
         <div className="App">
@@ -34,9 +39,10 @@ export default function Header() {
                             />
                         </div>
                         <div className={classes.grow} />
-                        <Button className="button" variant="outlined">{strings.LoginRegister}</Button>
+                        <Button className="button" onClick={openModal} variant="outlined">{strings.LoginRegister}</Button>
                     </Toolbar>
                 </AppBar>
+                {modal ? <LoginForm modal={modal} /> : ""}
             </div>
         </div>
     );
