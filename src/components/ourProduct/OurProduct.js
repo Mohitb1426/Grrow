@@ -80,7 +80,7 @@ export default function OurProduct() {
                 </div>
                 <div>
                 <Typography variant="h1" component="div" gutterBottom className='sidepart'>
-                   Zero
+                   Zero <span>accounts charges</span>
                  </Typography>
                 </div>
             </div> 
