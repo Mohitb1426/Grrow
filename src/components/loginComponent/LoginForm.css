@@ -90,6 +90,27 @@
     font-size: small !important;
 }
 
-.bold-policy-login{
+.bold-policy-login {
     font-weight: bold !important;
+}
+
+.loginForm-mainGrid {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.login-formDiv{
+    background-color: white;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    height: 450px;
+}
+.loginForm-imageDiv {
+    background-color: #3DB87A !important;
+    color: white !important;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    height: 450px;
 }

@@ -23,27 +23,26 @@ function LoginForm() {
   return (
     <React.Fragment>
       <Modal
+      style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
         className="login-form-modal"
-        hideBackdrop
         open={true}
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description"
       >
-        <Grid container
+        <Grid container className='loginForm-mainGrid'
           direction="row"
           alignItems="center"
           justifyContent="center"
-          style={{ "minHeight": '50vh', "outline": "none" }} columns={16}>
-          <Grid style={{ "height": "20em" }} item xs={8}>
-            <div className="loginform-imagediv">
+          columns={16}>
+          <Grid item xs={8}>
+            <div className="loginForm-imageDiv">
               Simple, Free <br /> Investing.
               <div className="loginform-imagediv-downside">US Stocks</div>
             </div>
-
           </Grid>
           <Grid item xs={8}>
-            <div >
-              <form className='login-form' >
+            <div className="login-formDiv">
+              <form>
                 <h1 className='continueWithGoogle'>Welcome to Groww</h1>
                 <div >
                   <Button variant="outlined" startIcon={<GoogleIcon />} className='googlebutton'>Continue with Google</Button>
