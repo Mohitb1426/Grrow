@@ -6,24 +6,25 @@ import Grid from "@mui/material/Grid";
 import TextField from '@mui/material/TextField';
 import './LoginForm.css';
 import swal from 'sweetalert';
-
-function LoginForm() {
+import { Box } from '@mui/material';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+function LoginForm({ closeModal }) {
   const [Email, setEmail] = useState('')
 
   const onContinue = () => {
-    const emailRegax =/\S+@\S+\.\S+/
-    if(Email !=='' && Email.match(emailRegax)){
-     swal("Welcome");
+    const emailRegax = /\S+@\S+\.\S+/
+    if (Email !== '' && Email.match(emailRegax)) {
+      swal("Welcome");
     }
-    else{
+    else {
       swal("Please Enter a Valid Email");
-      
+
     }
   }
   return (
     <React.Fragment>
       <Modal
-      style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
         className="login-form-modal"
         open={true}
         aria-labelledby="child-modal-title"
@@ -42,6 +43,11 @@ function LoginForm() {
           </Grid>
           <Grid item xs={8}>
             <div className="login-formDiv">
+            <Box className='login-closeButton' >
+              <IconButton onClick={closeModal}>
+                <CloseIcon />
+              </IconButton>
+            </Box>
               <form>
                 <h1 className='continueWithGoogle'>Welcome to Groww</h1>
                 <div >

@@ -15,6 +15,9 @@ export default function Header() {
     const openModal = () => {
         setModal(true);
     }
+    const closeModal = () => {
+        setModal(false);
+    }
     const classes = useStyles();
     return (
         <div className="App">
@@ -42,7 +45,7 @@ export default function Header() {
                         <Button className="button" onClick={openModal} variant="outlined">{strings.LoginRegister}</Button>
                     </Toolbar>
                 </AppBar>
-                {modal ? <LoginForm modal={modal} /> : ""}
+                {modal ? <LoginForm closeModal={closeModal} modal={modal} /> : ""}
             </div>
         </div>
     );
