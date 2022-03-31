@@ -16,6 +16,9 @@ export default function Header(props) {
     const openModal = () => {
         setModal(true);
     }
+    const closeModal = () => {
+        setModal(false);
+    }
     const classes = useStyles();
     return (
         <div className="App">
@@ -44,7 +47,7 @@ export default function Header(props) {
                         <Button className="button-lang" onClick={props.langChange} variant="outlined">Change Language</Button>
                     </Toolbar>
                 </AppBar>
-                {modal ? <LoginForm modal={modal} /> : ""}
+                {modal ? <LoginForm closeModal={closeModal} modal={modal} /> : ""}
             </div>
         </div>
     );

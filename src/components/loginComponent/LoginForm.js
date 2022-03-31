@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import GoogleIcon from '@mui/icons-material/Google';
@@ -6,24 +6,46 @@ import Grid from "@mui/material/Grid";
 import TextField from '@mui/material/TextField';
 import './LoginForm.css';
 import swal from 'sweetalert';
+import { Box } from '@mui/material';
+import IconButton from '@material-ui/core/IconButton';
+import CloseIcon from '@material-ui/icons/Close';
+import { withStyles } from "@material-ui/core/styles";
+import LinearProgress from "@material-ui/core/LinearProgress";
 
-function LoginForm() {
-  const [Email, setEmail] = useState('')
+const textArray = ['ETFs', 'Gold', 'US Stocks', 'Fixed Deposits', 'Stocks', 'Direct Mutual Funds'];
+
+function LoginForm({ closeModal }) {
+  const [Email, setEmail] = useState('');
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds(seconds => seconds + 1);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
+  const SlowLinearProgress = withStyles({
+    bar: {
+      animationDuration: "4s",
+    }
+  })(LinearProgress);
+
+  let textThatChanges = textArray[seconds % textArray.length];
 
   const onContinue = () => {
-    const emailRegax =/\S+@\S+\.\S+/
-    if(Email !=='' && Email.match(emailRegax)){
-     swal("Welcome");
+    const emailRegax = /\S+@\S+\.\S+/
+    if (Email !== '' && Email.match(emailRegax)) {
+      swal("Welcome");
     }
-    else{
+    else {
       swal("Please Enter a Valid Email");
-      
+
     }
   }
   return (
     <React.Fragment>
       <Modal
-      style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}
         className="login-form-modal"
         open={true}
         aria-labelledby="child-modal-title"
@@ -37,11 +59,18 @@ function LoginForm() {
           <Grid item xs={8}>
             <div className="loginForm-imageDiv">
               Simple, Free <br /> Investing.
-              <div className="loginform-imagediv-downside">US Stocks</div>
+              <div className="loginform-imagediv-downside">
+                <SlowLinearProgress />
+                {textThatChanges}</div>
             </div>
           </Grid>
           <Grid item xs={8}>
             <div className="login-formDiv">
+              <Box className='login-closeButton' >
+                <IconButton onClick={closeModal}>
+                  <CloseIcon />
+                </IconButton>
+              </Box>
               <form>
                 <h1 className='continueWithGoogle'>Welcome to Groww</h1>
                 <div >
