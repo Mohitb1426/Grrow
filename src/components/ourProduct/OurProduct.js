@@ -51,7 +51,7 @@ export default function OurProduct() {
                     </Box>
                 </div>
             </div>
-            <div>
+            <div >
                 <div className="keeplearn-grid">
                     <Grid alignItems="flex-start" container spacing={1}>
                         <Grid container direction="column" item xs={4} spacing={1}>
@@ -69,21 +69,28 @@ export default function OurProduct() {
                                         textAlign: 'center',
                                         fontSize: '0.875rem',
                                         fontWeight: '700',
-                                        marginLeft:'200px',
+                                        marginLeft: '200px',
                                     }}
                                     alt="The house from the offer."
                                     src={ourProductsImage}
                                 />
-                            </Grid>    
+                            </Grid>
                         </Grid>
-                    </Grid>    
+                    </Grid>
                 </div>
-                <div>
-                <Typography variant="h1" component="div" gutterBottom className='sidepart'>
-                   Zero <span>accounts charges</span>
-                 </Typography>
+                <div className='side-part-stocks' >
+                    <div>
+                        <Typography variant="h1" component="div" gutterBottom className='sidePart'>
+                            Zero
+                        </Typography>
+                    </div>
+                    <div className='side-part-1'>
+                        <Typography variant="h5" gutterBottom component="div">
+                            account charges
+                        </Typography>
+                    </div>
                 </div>
-            </div> 
-        </div>       
-            );
+            </div>
+        </div>
+    );
 }
