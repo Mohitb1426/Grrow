@@ -7,11 +7,11 @@ import BlogTwo from "../../assets/images/articlesImages/blog2.webp";
 import BlogThree from "../../assets/images/articlesImages/blog3.webp";
 import { strings } from "../../globalization/String";
 
-const ArticlesComponent = () => {
+const ArticlesComponent = (props) => {
     return (
         <div >
             <div className="keepLearning-keepGrowing-div">
-                <h1>{strings.KeepLearningKeepGrowing}</h1></div>
+                <h1>{props.change ? strings.KeepLearningKeepGrowing : strings.FrenchKeepLearningKeepGrowing}</h1></div>
             <div className="keeplearn-grid">
                 <Grid alignItems="flex-start" container spacing={1}>
                     <Grid container direction="column" item xs={4} spacing={1}>
@@ -34,7 +34,7 @@ const ArticlesComponent = () => {
                                 src={BlogOne}
                             />
                         </Grid>
-                        <h3 style={{ "width": "15em", "marginLeft": "4em" }} className="grid-text">{strings.SelectStocks}</h3>
+                        <h3 style={{ "width": "15em", "marginLeft": "4em" }} className="grid-text">{props.change ? strings.SelectStocks : strings.FrenchSelectStocks}</h3>
                     </Grid>
                     <Grid container direction="column" item xs={4} spacing={1}>
                         <Grid item xs={12} >
@@ -56,7 +56,7 @@ const ArticlesComponent = () => {
                                 src={BlogTwo}
                             />
                         </Grid>
-                        <h3 style={{ "width": "15em", "marginLeft": "4em" }} className="grid-text">{strings.GuideMutualFunds}</h3>
+                        <h3 style={{ "width": "15em", "marginLeft": "4em" }} className="grid-text">{props.change ? strings.GuideMutualFunds : strings.FrenchGuideMutualFunds}</h3>
                     </Grid>
                     <Grid container direction="column" item xs={4} spacing={1}>
                         <Grid item xs={12} >
@@ -78,7 +78,7 @@ const ArticlesComponent = () => {
                                 src={BlogThree}
                             />
                         </Grid>
-                        <h3 style={{ "width": "15em", "marginLeft": "4em" }} className="grid-text">{strings.DiversifyVolatility}</h3>
+                        <h3 style={{ "width": "15em", "marginLeft": "4em" }} className="grid-text">{props.change ? strings.DiversifyVolatility:strings.FrenchDiversifyVolatility}</h3>
                     </Grid>
                 </Grid>
             </div>

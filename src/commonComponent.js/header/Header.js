@@ -10,7 +10,8 @@ import { strings } from "../../globalization/String";
 import { useStyles } from "./HeaderStyle";
 import LoginForm from "../../components/loginComponent/LoginForm";
 
-export default function Header() {
+
+export default function Header(props) {
     const [modal, setModal] = useState(false)
     const openModal = () => {
         setModal(true);
@@ -39,7 +40,8 @@ export default function Header() {
                             />
                         </div>
                         <div className={classes.grow} />
-                        <Button className="button" onClick={openModal} variant="outlined">{strings.LoginRegister}</Button>
+                        <Button className="button" onClick={openModal} variant="outlined">{props.change ? strings.LoginRegister : strings.FrenchLoginRegister}</Button>
+                        <Button className="button-lang" onClick={props.langChange} variant="outlined">Change Language</Button>
                     </Toolbar>
                 </AppBar>
                 {modal ? <LoginForm modal={modal} /> : ""}
