@@ -18,7 +18,7 @@ const divStyle = {
     alignItems: 'center'
 };
 const textArray = ['Mutual Funds', 'Stocks', 'Futures & Options', 'US Stocks', 'IPO', 'Fixed Deposits'];
-const HomeScreen = () => {
+const HomeScreen = (props) => {
     const [seconds, setSeconds] = useState(0);
 
     useEffect(() => {
@@ -35,12 +35,12 @@ const HomeScreen = () => {
                 <Grid className="homeScreenCardViews-invest" item xs={10}>
                     <div className="homeScreenCardViews-span">
                         <div style={divStyle}>
-                            <h1 >{strings.FDInvest} </h1>
+                            <h1 >{props.change ? strings.FDInvest:strings.FrenchFDInvest} </h1>
                             <h1 className="suffle-text">{textThatChanges}</h1>
                         </div>
 
                         <h3 >{strings.FDInvestDescription}</h3>
-                        <Button className="homeScreenCardViews-button" variant="outlined">{strings.GetStarted}</Button>
+                        <Button className="homeScreenCardViews-button" variant="outlined">{props.change ? strings.GetStarted : strings.FrenchGetStarted}</Button>
                     </div>
                 </Grid>
                 <Grid item xs={6}>
@@ -63,7 +63,7 @@ const HomeScreen = () => {
                                         fontWeight: '700',
                                     }}
                                 ><Avatar alt="Remy Sharp" src={MutualFunds} />
-                                    <h3 className="homeScreenCardViews-avatar">{strings.MutualFunds}</h3>
+                                    <h3 className="homeScreenCardViews-avatar">{props.change ? strings.MutualFunds:strings.FrenchMutualFunds}</h3>
                                 </Box>
                             </Grid>
                         </Grid>
@@ -85,7 +85,7 @@ const HomeScreen = () => {
                                         fontWeight: '700',
                                     }}
                                 ><Avatar alt="Remy Sharp" src={StocksImage} />
-                                    <h3 className="homeScreenCardViews-avatar">{strings.Stocks}</h3>
+                                    <h3 className="homeScreenCardViews-avatar">{props.change ? strings.Stocks:strings.FrenchStocks}</h3>
                                 </Box>
                             </Grid>
                         </Grid>
@@ -107,7 +107,7 @@ const HomeScreen = () => {
                                         fontWeight: '700',
                                     }}
                                 ><Avatar alt="Remy Sharp" src={FuturesOptionsImage} />
-                                    <h3 className="homeScreenCardViews-avatar">{strings.FuturesOptions}</h3>
+                                    <h3 className="homeScreenCardViews-avatar">{props.change ? strings.FuturesOptions : strings.FrenchFuturesOptions}</h3>
                                 </Box>
                             </Grid>
                         </Grid>
@@ -129,7 +129,7 @@ const HomeScreen = () => {
                                         fontWeight: '700',
                                     }}
                                 ><Avatar alt="Remy Sharp" src={USStocksImage} />
-                                    <h3 className="homeScreenCardViews-avatar">{strings.USStocks}</h3>
+                                    <h3 className="homeScreenCardViews-avatar">{props.change ? strings.USStocks : strings.FrenchUSStocks}</h3>
                                 </Box>
                             </Grid>
                         </Grid>
@@ -151,7 +151,7 @@ const HomeScreen = () => {
                                         fontWeight: '700',
                                     }}
                                 ><Avatar alt="Remy Sharp" src={IPOImage} />
-                                    <h3 className="homeScreenCardViews-avatar">{strings.IPO}</h3>
+                                    <h3 className="homeScreenCardViews-avatar">{props.change ? strings.IPO : strings.FrenchIPO}</h3>
                                 </Box>
                             </Grid>
                         </Grid>
@@ -174,7 +174,7 @@ const HomeScreen = () => {
                                         alignItems: 'start'
                                     }}
                                 ><Avatar alt="Remy Sharp" src={FixedDepositsImage} />
-                                    <h3 className="homeScreenCardViews-avatar">{strings.FixedDeposits}</h3>
+                                    <h3 className="homeScreenCardViews-avatar">{props.change ? strings.FixedDeposits : strings.FrenchFixedDeposits}</h3>
                                 </Box>
                             </Grid>
                         </Grid>

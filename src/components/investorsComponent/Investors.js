@@ -11,14 +11,14 @@ const divStyle = {
     display: 'flex',
     alignItems: 'center'
 };
-const Investors = () => {
+const Investors = (props) => {
     return (
         <div className="investors-div">
             <div className="investors-heading">
                 <div style={divStyle}>
-                    <span className="investor-heading-span" >{strings.CreatingInvestors} </span>
+                    <span className="investor-heading-span" >{props.change ? strings.CreatingInvestors : strings.FrenchCreatingInvestors} </span>
                 </div>
-                <span className="investor-subHeading-span">{strings.CreatingInvestorsDescription}</span>
+                <span className="investor-subHeading-span">{props.change ? strings.CreatingInvestorsDescription : strings.FrenchCreatingInvestorsDescription}</span>
             </div>
             <div className="investor-grid">
                 <Grid alignItems="flex-start" container spacing={1}>
@@ -46,9 +46,9 @@ const Investors = () => {
                                     </div></div>
                                 <div>
                                     <div className="investor-description-span">
-                                        <p>{strings.InvestorDescription} </p>
-                                        <p className="invertor-pragraph">{strings.InvestorName} </p>
-                                        <p className="invertor-pragraph-second">{strings.InvestorTitle} </p>
+                                        <p>{props.change ? strings.InvestorDescription : strings.FrenchInvestorDescription} </p>
+                                        <p className="invertor-pragraph">{props.change ? strings.InvestorName : strings.FrenchInvestorName} </p>
+                                        <p className="invertor-pragraph-second">{props.change ? strings.InvestorTitle : strings.FrenchInvestorTitle} </p>
                                     </div>
                                 </div>
                             </Box>
@@ -78,9 +78,9 @@ const Investors = () => {
                                     </div></div>
                                 <div>
                                     <div className="investor-description-span">
-                                        <p>{strings.InvestorDescription} </p>
-                                        <p className="invertor-pragraph">{strings.InvestorName} </p>
-                                        <p className="invertor-pragraph-second">{strings.InvestorTitle} </p>
+                                        <p>{props.change ? strings.InvestorDescription : strings.FrenchInvestorDescription} </p>
+                                        <p className="invertor-pragraph">{props.change ? strings.InvestorName : strings.FrenchInvestorName} </p>
+                                        <p className="invertor-pragraph-second">{props.change ? strings.InvestorTitle : strings.FrenchInvestorTitle} </p>
                                     </div>
                                 </div>
                             </Box>
@@ -110,9 +110,9 @@ const Investors = () => {
                                     </div></div>
                                 <div>
                                     <div className="investor-description-span">
-                                        <p>{strings.InvestorDescription} </p>
-                                        <p className="invertor-pragraph">{strings.InvestorName} </p>
-                                        <p className="invertor-pragraph-second">{strings.InvestorTitle} </p>
+                                        <p>{props.change ? strings.InvestorDescription : strings.FrenchInvestorDescription} </p>
+                                        <p className="invertor-pragraph">{props.change ? strings.InvestorName:strings.FrenchInvestorName} </p>
+                                        <p className="invertor-pragraph-second">{props.change ? strings.InvestorTitle : strings.FrenchInvestorTitle} </p>
                                     </div>
                                 </div>
                             </Box>
