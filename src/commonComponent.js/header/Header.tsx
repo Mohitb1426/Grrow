@@ -11,7 +11,7 @@ import { useStyles } from "./HeaderStyle";
 import LoginForm from "../../components/loginComponent/LoginForm";
 
 
-export default function Header(props) {
+export default function Header(props: any) {
     const [modal, setModal] = useState(false)
     const openModal = () => {
         setModal(true);

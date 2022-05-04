@@ -15,9 +15,9 @@ const Main = () => {
     }
     return (
         <div>
-            <ErrorHandler><Header change={lang} langChange ={langChange}/></ErrorHandler>
+            <ErrorHandler><Header change={lang} langChange={langChange} /></ErrorHandler>
             <ErrorHandler><HomeScreenCardViews change={lang} /></ErrorHandler>
-            <OurProduct change={lang} />
+            <ErrorHandler><OurProduct /></ErrorHandler>
             <ErrorHandler> <KeepLearnKeepGrow change={lang} /></ErrorHandler>
             <ErrorHandler><Investor change={lang} /></ErrorHandler>
         </div>

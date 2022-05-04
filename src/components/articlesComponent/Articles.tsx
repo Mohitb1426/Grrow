@@ -7,7 +7,11 @@ import BlogTwo from "../../assets/images/articlesImages/blog2.webp";
 import BlogThree from "../../assets/images/articlesImages/blog3.webp";
 import { strings } from "../../globalization/String";
 
-const ArticlesComponent = (props) => {
+interface IMyProps {
+    change: boolean;
+}
+
+const ArticlesComponent = (props: IMyProps) => {
     return (
         <div >
             <div className="keepLearning-keepGrowing-div">
@@ -78,7 +82,7 @@ const ArticlesComponent = (props) => {
                                 src={BlogThree}
                             />
                         </Grid>
-                        <h3 style={{ "width": "15em", "marginLeft": "4em" }} className="grid-text">{props.change ? strings.DiversifyVolatility:strings.FrenchDiversifyVolatility}</h3>
+                        <h3 style={{ "width": "15em", "marginLeft": "4em" }} className="grid-text">{props.change ? strings.DiversifyVolatility : strings.FrenchDiversifyVolatility}</h3>
                     </Grid>
                 </Grid>
             </div>

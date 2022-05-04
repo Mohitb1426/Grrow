@@ -14,7 +14,7 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 
 const textArray = ['ETFs', 'Gold', 'US Stocks', 'Fixed Deposits', 'Stocks', 'Direct Mutual Funds'];
 
-function LoginForm({ closeModal }) {
+function LoginForm({ closeModal }: any) {
   const [Email, setEmail] = useState('');
   const [seconds, setSeconds] = useState(0);
 

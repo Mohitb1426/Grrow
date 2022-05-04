@@ -6,6 +6,7 @@ import LangHeaderFrench from "./Language/LanguageHeader/LangHeaderFrench";
 import LanguageArticlesFrench from "./Language/LanguageArticle/LanguageArticlesFrench"
 import LanguageHomeScreenFrench from "./Language/LanguageHomeScreen/LanguageHomeScreenFrench"
 import LanguageInvestorsFrench from "./Language/LanguageInvestors/LanguageInvestorsFrench";
+import { useEffect } from "react";
 
 export const strings = {
     ...Articles,
@@ -14,6 +15,6 @@ export const strings = {
     ...LanguageInvestors,
     ...LangHeaderFrench,
     ...LanguageArticlesFrench,
-    ...LanguageHomeScreenFrench ,
+    ...LanguageHomeScreenFrench,
     ...LanguageInvestorsFrench
 }

@@ -5,18 +5,21 @@
         "plugin:react/recommended",
         "plugin:jsx-a11y/recommended"
     ],
-    "plugins": ["react", "import", "jsx-a11y"],
+    "plugins": [
+        "react",
+        "import",
+        "jsx-a11y"
+    ],
     "rules": {
         "react/prop-types": 0,
         "linebreak-style": 1,
         "indent": "off"
-
     },
     "parserOptions": {
         "ecmaVersion": 2021,
         "sourceType": "module",
         "ecmaFeatures": {
-        "jsx": true
+            "jsx": true
         }
     },
     "env": {
@@ -25,9 +28,13 @@
         "node": true
     },
     "settings": {
-        "react": {
-        "version": "detect"
+        "import/resolver": {
+            "react": {
+                "extensions": [
+                    ".ts",
+                    ".mjs"
+                ]
+            }
         }
-    }
-    }
-    
+    },
+}
